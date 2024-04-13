@@ -3,6 +3,7 @@ import { Armor } from "./types";
 export const Armors: Record<string, Armor> = {
   "Leather Headgear": {
     name: "Leather Headgear",
+    type: "helm",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -17,6 +18,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Leather Mail": {
     name: "Leather Mail",
+    type: "chest",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -31,6 +33,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Leather Gloves": {
     name: "Leather Gloves",
+    type: "gloves",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -45,6 +48,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Leather Belt": {
     name: "Leather Belt",
+    type: "belt",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -59,6 +63,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Leather Trousers": {
     name: "Leather Trousers",
+    type: "legs",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -73,6 +78,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Jagras Helm": {
     name: "Jagras Helm",
+    type: "helm",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -87,6 +93,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Jagras Mail": {
     name: "Jagras Mail",
+    type: "chest",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -101,6 +108,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Jagras Vambraces": {
     name: "Jagras Vambraces",
+    type: "gloves",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -115,6 +123,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Jagras Coil": {
     name: "Jagras Coil",
+    type: "belt",
     defense: [20, 182],
     equipementSkills: [
       {
@@ -133,6 +142,7 @@ export const Armors: Record<string, Armor> = {
   },
   "Jagras Greaves": {
     name: "Jagras Greaves",
+    type: "legs",
     defense: [20, 182],
     equipementSkills: [
       {

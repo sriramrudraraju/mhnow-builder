@@ -1,5 +1,7 @@
 import { twMerge } from "tailwind-merge";
 
+import { Skill } from '../skill'
+
 import { useSelectedArmor } from "../contexts/selectedArmor";
 
 export const Preview = () => {
@@ -29,7 +31,8 @@ export const Preview = () => {
           <div className={twMerge("py-[4px]")}>
             {selectedArmor.equipementSkills.map((es) => (
               <div key={`${es.skillName} ${es.grade}`}>
-                {`${es.skillName} (grade ${es.grade})`}
+                <Skill name={es.skillName} level={1}/>
+                {`(grade ${es.grade})`}
               </div>
             ))}
           </div>

@@ -1,6 +1,19 @@
 import { Armor } from "./types";
 
-export const Armors: Record<string, Armor> = {
+export enum ArmorNames {
+  "Leather Headgear",
+  "Leather Mail",
+  "Leather Gloves",
+  "Leather Belt",
+  "Leather Trousers",
+  "Jagras Helm",
+  "Jagras Mail",
+  "Jagras Vambraces",
+  "Jagras Coil",
+  "Jagras Greaves"
+}
+
+export const Armors: Record<keyof typeof ArmorNames, Armor> = {
   "Leather Headgear": {
     name: "Leather Headgear",
     type: "helm",

@@ -1,3 +1,6 @@
+import { skillNames } from './skill'
+import { ArmorNames } from './armor'
+
 /**
  * @property {number} level - skill level
  * @example
@@ -23,7 +26,7 @@ export type SkillEffect = {
  * // [{ level: 1, description: "Increases attack power by 20."}]
  */
 export type Skill = {
-  name: string;
+  name: keyof typeof skillNames;
   description: string;
   effects: SkillEffect[];
 };
@@ -37,11 +40,13 @@ export type Skill = {
  * // 4.
  */
 export type EquipmentSkill = {
-  skillName: string;
+  skillName: keyof typeof skillNames;
   grade: number;
 };
 
-export type ArmorType = "helm" | "chest" | "gloves" | "belt" | "legs";
+export enum ArmorType {
+  "helm", "chest", "gloves", "belt", "legs"
+}
 
 /**
  * @property {string} name - Armor name
@@ -55,8 +60,8 @@ export type ArmorType = "helm" | "chest" | "gloves" | "belt" | "legs";
  * // [{ skillName: 'Attack Boost', grade: 4}].
  */
 export type Armor = {
-  name: string;
-  type: ArmorType;
+  name: keyof typeof ArmorNames;
+  type: keyof typeof ArmorType;
   defense: [number, number];
   equipementSkills: EquipmentSkill[];
 };
@@ -72,6 +77,6 @@ export type Armor = {
 export type ArmorSet = {
   name: string;
   armor: {
-    [key in ArmorType]: Armor;
+    [key in keyof typeof ArmorType]: Armor;
   };
 };
